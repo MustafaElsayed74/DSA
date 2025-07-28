@@ -1,9 +1,62 @@
 
-public class stack {
-final int maxSize = 100;
-int top;
-int[] item = new int[maxSize];
+public class Stack {
+    final int maxSize = 100;
+    int top;
+    int[] item = new int[maxSize];
 
+    // Stack Functions:
+    // push(val) => add element
+    // pop() => remove the last inputted element
+    // isEmpty() => check if stack is empty
+    // getTop() => return the top element
 
+    public Stack() {
+        top = -1;
+    }
+
+    public void push(int element) {
+        if (top >= maxSize - 1) {
+            System.out.println("stack is full on push");
+        }
+        item[++top] = element;
+    }
+
+    public void pop() {
+
+        if (isEmpty())
+            System.out.println("stack is empty on pop");
+        top--;
+    }
+
+    public boolean isEmpty() {
+        return top < 0;
+    }
+
+    public void pop(int element) {
+        if (isEmpty()) {
+            System.out.println("stack is empty on pop");
+        } else {
+            element = item[top];
+            top--;
+        }
+    }
+
+    public void getTop() {
+
+        if (isEmpty()) {
+            System.out.println("stack is empty on getTop");
+        } else {
+            System.out.println(item[top]);
+        }
+    }
+
+    public void print() {
+        for (int i = 0; i < top + 1; i++) {
+            System.out.println("[");
+            System.out.println(item[i]);
+            System.out.println("]");
+
+        }
+    }
 
 }
