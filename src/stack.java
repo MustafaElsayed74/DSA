@@ -51,12 +51,12 @@ public class Stack {
     }
 
     public void print() {
-        for (int i = 0; i < top + 1; i++) {
-            System.out.println("[");
-            System.out.println(item[i]);
-            System.out.println("]");
+        System.out.print("[");
 
+        for (int i = top; i >= 0; i--) {
+            System.out.print(item[i] + " ");
         }
+        System.out.print("]");
     }
 
 }
