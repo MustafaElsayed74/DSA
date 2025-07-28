@@ -1,10 +1,10 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Stack stack = new Stack();
-        stack.push(12);
-        stack.push(13);
-        stack.push(34);
-        stack.push(45);
+        Stack<String> stack = new Stack<String>();
+        stack.push("Mustafa");
+        stack.push("Elsayed");
+        // stack.push("Mustafa");
+        stack.push("Ahmed");
         stack.getTop();
         stack.pop();
         stack.getTop();

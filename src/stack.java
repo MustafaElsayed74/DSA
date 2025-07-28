@@ -1,8 +1,8 @@
 
-public class Stack {
+public class Stack<T> {
     final int maxSize = 100;
     int top;
-    int[] item = new int[maxSize];
+    T[] item;
 
     // Stack Functions:
     // push(val) => add element
@@ -12,9 +12,10 @@ public class Stack {
 
     public Stack() {
         top = -1;
+        item = (T[]) new Object[maxSize];
     }
 
-    public void push(int element) {
+    public void push(T element) {
         if (top >= maxSize - 1) {
             System.out.println("stack is full on push");
         }
@@ -32,7 +33,7 @@ public class Stack {
         return top < 0;
     }
 
-    public void pop(int element) {
+    public void pop(T element) {
         if (isEmpty()) {
             System.out.println("stack is empty on pop");
         } else {
